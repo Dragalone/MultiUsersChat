@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.util.Date;
 
 
 public class ViewGuiServer {
@@ -58,7 +59,8 @@ public class ViewGuiServer {
 
     //метод который добавляет в текстовое окно новое сообщение
     public void refreshDialogWindowServer(String serviceMessage) {
-        dialogWindow.append(serviceMessage);
+        Date date = new Date();
+        dialogWindow.append("[" + date + "] " + serviceMessage);
     }
 
     //метод вызывающий диалоговое окно для ввода порта сервера

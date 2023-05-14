@@ -8,6 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.util.Date;
 import java.util.Set;
 
 public class ViewGuiClient {
@@ -81,7 +82,8 @@ public class ViewGuiClient {
     }
 
     protected void addMessage(String text) {
-        messages.append(text);
+        Date date = new Date();
+        messages.append("[" + date + "] " + text);
     }
 
     //метод обновляющий список имен подлючившихся пользователей
